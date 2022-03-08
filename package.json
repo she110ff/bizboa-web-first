@@ -74,7 +74,8 @@
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "bizboa-swap-sdk": "^1.0.4"
   },
   "resolutions": {
     "immer": "^8.0.1",
@@ -103,5 +104,7 @@
       "last 1 safari version"
     ]
   },
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+  }
 }
