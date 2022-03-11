@@ -17,18 +17,27 @@ import Menu from '../Menu'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 // import VersionSwitch from './VersionSwitch'
-import {
-  Link
-} from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const StyledLink = styled(Link)`
-	box-sizing: border-box;
-	display: block;
-	padding: 4px 8px;
-	margin: 0 auto;
-	text-align: center;
-`;
-
+  box-sizing: border-box;
+  display: block;
+  padding: 4px 8px;
+  margin: 0 auto;
+  text-align: center;
+  :hover,
+  :focus {
+    cursor: pointer;
+    outline: none;
+    background-color: ${({ theme }) => theme.bg4};
+  }
+  color: ${({ theme }) => theme.text2};
+  :hover {
+    color: ${({ theme }) => theme.text1};
+    cursor: pointer;
+    text-decoration: none;
+  }
+`
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -129,7 +138,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.STANDALONE]: 'Boaswap Development',
   [ChainId.ROPSTEN]: 'Moonrock Rococo',
   [ChainId.LUNIVERSE_TEST]: 'Moonbase Alpha',
-  [ChainId.LUNIVERSE_PROD]: 'Moonshadow Westend',
+  [ChainId.LUNIVERSE_PROD]: 'Moonshadow Westend'
 }
 
 export default function Header() {
