@@ -17,6 +17,18 @@ import Menu from '../Menu'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 // import VersionSwitch from './VersionSwitch'
+import {
+  Link
+} from "react-router-dom"
+
+const StyledLink = styled(Link)`
+	box-sizing: border-box;
+	display: block;
+	padding: 4px 8px;
+	margin: 0 auto;
+	text-align: center;
+`;
+
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -132,9 +144,13 @@ export default function Header() {
         <HeaderElement>
           <Title href=".">
             <UniIcon>
-              <img style={{ height: 50 }} src={Logo} alt="logo" />
+              <img style={{ height: 30 }} src={Logo} alt="logo" />
             </UniIcon>
           </Title>
+          <StyledLink to="/myassets">MyAssets</StyledLink>
+          <StyledLink to="/swap">Swap</StyledLink>
+          <StyledLink to="/pool">Pool</StyledLink>
+          <StyledLink to="/bridge">Bridge</StyledLink>
         </HeaderElement>
         <HeaderControls>
           <HeaderElement>

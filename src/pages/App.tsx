@@ -15,6 +15,8 @@ import {
 import Pool from './Pool'
 import PoolFinder from './PoolFinder'
 import Swap from './Swap'
+import MyAssets from './MyAssets'
+import Bridge from './Bridge'
 import RemoveLiquidity from './RemoveLiquidity'
 import { RedirectPathToSwapOnly, RedirectToSwap } from './Swap/redirects'
 import { RedirectOldRemoveLiquidityPathStructure } from './RemoveLiquidity/redirects'
@@ -68,6 +70,8 @@ export default function App() {
             <Popups />
             <Web3ReactManager>
               <Switch>
+                <Route exact strict path="/myassets" component={MyAssets} />
+                <Route exact strict path="/bridge" component={Bridge} />
                 <Route exact strict path="/swap" component={Swap} />
                 <Route exact strict path="/swap/:outputCurrency" component={RedirectToSwap} />
                 <Route exact strict path="/send" component={RedirectPathToSwapOnly} />
