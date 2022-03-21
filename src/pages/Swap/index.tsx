@@ -47,7 +47,8 @@ import Loader from '../../components/Loader'
 export default function Swap() {
   const { t } = useTranslation()
   const loadedUrlParams = useDefaultsFromURLSearch()
-
+  // loadedUrlParams.inputCurrencyId = 'WBOA'
+  console.log('loadedUrlParams :', loadedUrlParams)
   // token warning stuff
   const [loadedInputCurrency, loadedOutputCurrency] = [
     useCurrency(loadedUrlParams?.inputCurrencyId),

@@ -268,6 +268,7 @@ export function useDefaultsFromURLSearch():
     { inputCurrencyId: string | undefined; outputCurrencyId: string | undefined } | undefined
   >()
 
+  console.log('parsedQs :', parsedQs, parsedQs.inputCurrency)
   useEffect(() => {
     if (!chainId) return
     const parsed = queryParametersToSwapState(parsedQs)
@@ -276,7 +277,8 @@ export function useDefaultsFromURLSearch():
       replaceSwapState({
         typedValue: parsed.typedValue,
         field: parsed.independentField,
-        inputCurrencyId: parsed[Field.INPUT].currencyId,
+        inputCurrencyId: '0xBb0CC0fb3e0c06725c67167501f850B4900D6DB5',
+        // inputCurrencyId: parsed[Field.INPUT].currencyId,
         outputCurrencyId: parsed[Field.OUTPUT].currencyId,
         recipient: parsed.recipient
       })

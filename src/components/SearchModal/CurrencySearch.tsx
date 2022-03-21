@@ -80,6 +80,7 @@ export function CurrencySearch({
   const filteredSortedTokens: Token[] = useMemo(() => {
     if (searchToken) return [searchToken]
     const sorted = filteredTokens.sort(tokenComparator)
+    console.log('sorted:', sorted)
     const symbolMatch = searchQuery
       .toLowerCase()
       .split(/\s+/)
@@ -202,10 +203,10 @@ export function CurrencySearch({
           ) : null}
           <LinkStyledButton
             style={{ fontWeight: 500, color: theme.text2, fontSize: 16 }}
-            onClick={onChangeList}
+            // onClick={onChangeList}
             id="currency-search-change-list-button"
           >
-            {selectedListInfo.current ? 'Change' : 'Select a list'}
+            {/*{selectedListInfo.current ? 'Change' : 'Select a list'}*/}
           </LinkStyledButton>
         </RowBetween>
       </Card>
